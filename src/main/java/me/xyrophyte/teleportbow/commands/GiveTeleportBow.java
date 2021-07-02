@@ -28,14 +28,16 @@ public class GiveTeleportBow implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("tb.gettpbow")) {
+            if(player.hasPermission("tb.tpbow")) {
                 assert tpBowMeta != null;
                 assert tpArrowMeta != null;
                 tpBowMeta.setDisplayName(ChatColor.AQUA + "Teleport Bow");
                 tpArrowMeta.setDisplayName(ChatColor.AQUA + "Teleport Arrow");
                 tpBow.addEnchantment(Enchantment.ARROW_INFINITE, 1);
                 tpBowMeta.setUnbreakable(true);
-                player.getInventory().addItem(tpBow);
+                tpBow.setItemMeta(tpBowMeta);
+                tpArrow.setItemMeta(tpArrowMeta);
+                player.getInventory().addItem(tpBow, tpArrow);
             } else {
                 player.sendMessage(ChatColor.RED + "Failed to run command. REASON: Not enough permission.");
                 player.sendMessage(ChatColor.RED + "Please contact an administrator if you believe this is an error.");
