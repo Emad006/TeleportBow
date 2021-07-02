@@ -1,0 +1,7 @@
+name: TeleportBow
+version: ${project.version}
+main: me.xyrophyte.teleportbow.TeleportBow
+api-version: 1.17
+authors: [ XyroPhyte ]
+description: A simple Teleportation Bow Spigot plugin.
+website: https://sites.google.com/view/xyrophyte/
