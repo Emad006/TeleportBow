@@ -5,3 +5,7 @@ api-version: 1.17
 authors: [ XyroPhyte ]
 description: A simple Teleportation Bow Spigot plugin.
 website: https://sites.google.com/view/xyrophyte/
+commands:
+  tpbow:
+    description: Gives the player a Teleportation Bow.
+    usage: /tpbow
