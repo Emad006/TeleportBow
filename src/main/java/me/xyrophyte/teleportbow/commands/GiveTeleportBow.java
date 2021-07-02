@@ -20,7 +20,9 @@ public class GiveTeleportBow implements CommandExecutor {
     }
 
     private final ItemStack tpBow = new ItemStack(Material.BOW);
+    private final ItemStack tpArrow = new ItemStack(Material.ARROW);
     private final ItemMeta tpBowMeta = tpBow.getItemMeta();
+    private final ItemMeta tpArrowMeta = tpArrow.getItemMeta();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -28,7 +30,9 @@ public class GiveTeleportBow implements CommandExecutor {
             Player player = (Player) sender;
             if(player.hasPermission("tb.gettpbow")) {
                 assert tpBowMeta != null;
+                assert tpArrowMeta != null;
                 tpBowMeta.setDisplayName(ChatColor.AQUA + "Teleport Bow");
+                tpArrowMeta.setDisplayName(ChatColor.AQUA + "Teleport Arrow");
                 tpBow.addEnchantment(Enchantment.ARROW_INFINITE, 1);
                 tpBowMeta.setUnbreakable(true);
                 player.getInventory().addItem(tpBow);
