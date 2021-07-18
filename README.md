@@ -31,7 +31,7 @@ they will not be teleported.
 - `tpbow.nofall` disables fall damage.
 
 ## Support
-If you come across a bug or an unexpected behavior, please open a [GitHub Issue](https://github.com/XyroPhyte/slashSuicide/issues)
+If you come across a bug or an unexpected behavior, please open a [GitHub Issue](https://github.com/XyroPhyte/TeleportBow/issues)
 or join the [Discord Server](https://discord.gg/MmqXcebnxC) and let me know about it. Please make sure
 to include how to reproduce the bug or the issue.
 
