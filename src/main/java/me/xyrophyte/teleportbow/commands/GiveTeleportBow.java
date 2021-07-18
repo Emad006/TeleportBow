@@ -28,7 +28,7 @@ public class GiveTeleportBow implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            if(player.hasPermission("tb.tpbow")) {
+            if(player.hasPermission("tpbow.getbow")) {
                 assert tpBowMeta != null;
                 assert tpArrowMeta != null;
                 tpBowMeta.setDisplayName(ChatColor.AQUA + "Teleport Bow");

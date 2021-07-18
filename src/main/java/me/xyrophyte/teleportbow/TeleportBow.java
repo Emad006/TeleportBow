@@ -1,7 +1,7 @@
 package me.xyrophyte.teleportbow;
 
 import me.xyrophyte.teleportbow.commands.GiveTeleportBow;
-import me.xyrophyte.teleportbow.events.Teleportation;
+import me.xyrophyte.teleportbow.events.OnProjectileHit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,7 +14,7 @@ public final class TeleportBow extends JavaPlugin {
         // Plugin startup logic
         getLogger().info(ChatColor.BLUE + "Plugin is starting up.");
         Objects.requireNonNull(getCommand("tpbow")).setExecutor(new GiveTeleportBow(this));
-        getServer().getPluginManager().registerEvents(new Teleportation(), this);
+        getServer().getPluginManager().registerEvents(new OnProjectileHit(), this);
         getLogger().info(ChatColor.BLUE + "Plugin started successfully.");
         getLogger().info(ChatColor.DARK_PURPLE + "For support, join:");
         getLogger().info(ChatColor.LIGHT_PURPLE + "https://discord.gg/dpYrXXWWrM");

@@ -7,14 +7,16 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ProjectileHitEvent;
 
-public class Teleportation implements Listener {
+public class OnProjectileHit implements Listener {
     @EventHandler
-    public void arrowLand(ProjectileHitEvent event) {
+    public void projectileHit(ProjectileHitEvent event) {
         if (event.getEntity() instanceof Arrow) {
             Player player = (Player) event.getEntity().getShooter();
             Location location = event.getEntity().getLocation();
             assert player != null;
-            player.teleport(location);
+            if(player.hasPermission("tpbow.teleport")) {
+                player.teleport(location);
+            }
         }
     }
 }
