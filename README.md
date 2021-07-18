@@ -27,7 +27,7 @@ This plugin is written in [Java 8](https://www.oracle.com/java/technologies/java
 - `tpbow.getbow` allows user to run /tpbow and get the teleportation bow.
 - `tpbow.teleport` allows user to teleport to the place the arrow landed. If the player doesn't have the permission,
 they will not be teleported.
-- `tpbow.bowonjoin` gives the user the teleportation bow and arrow on join.
+- `tpbow.bowonjoin` gives the user the teleportation bow and arrow on join. You can assign this permission to default group.
 - `tpbow.nofall` disables fall damage.
 
 ## Support
