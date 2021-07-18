@@ -1,6 +1,7 @@
 package me.xyrophyte.teleportbow.commands;
 
 import me.xyrophyte.teleportbow.TeleportBow;
+import me.xyrophyte.teleportbow.events.OnJoin;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
